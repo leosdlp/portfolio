@@ -1,0 +1,22 @@
+.cont-text-ia{
+    display: block;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10vh;
+    width: 50%;
+    margin-bottom: 6vh;
+    padding-bottom:3rem;
+  }
+  
+  h3{
+    margin-top: 3rem;
+  }
+  
+  .effi{
+    margin-top: 0rem;
+  }
+  
+  .point{
+    margin-left:2rem;
+  }
