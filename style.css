@@ -3,8 +3,6 @@ html {
   width: 100%;
 }
 
-/*html,body { overflow:hidden;}*/
-
 * {
   font-family: 'Nunito', sans-serif;
   user-select: none;
@@ -123,7 +121,7 @@ body {
   color: #dedede;
 }
 
-.cvtel,.tabtel {
+.cvtel,.tabtel, .delBtnItem {
   color: #b8b8ff;
   border: 1px solid #b8b8ff;
   background-color: transparent;
@@ -147,7 +145,7 @@ body {
   box-shadow: inset 15rem 0 0 0 #b8b8ff;
 }
 
-.tabtel:hover {
+.tabtel:hover, .delBtnItem:hover {
   color: #010141;
   border: 1px solid #ffffff;
   cursor: pointer;
@@ -309,7 +307,7 @@ body {
     grid-template-columns: repeat(3, 1fr) !important;
   }
 
-  .stages {
+  .stages, .exp-pro {
     grid-template-columns: repeat(2, 1fr) !important;
   }
   .diplomes{
@@ -337,7 +335,7 @@ body {
     grid-template-columns: repeat(1, 1fr) !important;
   }
 
-  .stages {
+  .stages, .exp-pro {
     grid-template-columns: repeat(1, 1fr) !important;
   }
   .diplomes{
@@ -358,19 +356,6 @@ body {
     margin-left: auto;
     margin-right: auto;
   }
-}
-
-.cont-caroussel {
-  display: grid;
-  place-items: center;
-  min-height: 30vh;
-}
-
-.caroussel {
-  display: flex;
-  align-items: center;
-  perspective: 50rem;
-  transform: translateX(-4.5rem);
 }
 
 .item {
@@ -420,7 +405,7 @@ body {
   }
 }
 
-.stageBtn {
+.stageBtn, .projetBtn {
   width: 100%;
   font-size: 24px;
   cursor: pointer;
@@ -429,15 +414,16 @@ body {
   color: #dedede;
   border-radius: 15px;
   transition: .3s;
+  text-decoration: none;
 }
 
-.stageBtn:hover {
+.stageBtn:hover, .projetBtn:hover {
   background-color: #dedede !important;
   color: #313338 !important;
   transform: translateY(-0.2rem);
 }
 
-.stages {
+.stages, .exp-pro {
   place-items: center;
   align-items: center;
   margin-left: auto;
@@ -448,7 +434,7 @@ body {
   text-align: center;
   gap: 1rem;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .stage-en-cours {

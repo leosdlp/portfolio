@@ -51,11 +51,11 @@ let stageeffseittexte = document.getElementById('stageeffseittexte');
 let stageiyoo = document.getElementById('stageiyoo');
 let stageiyootexte = document.getElementById('stageiyootexte');
 
-let stagetennis = document.getElementById('stagetennis');
-let stagetennistexte = document.getElementById('stagetennistexte');
+// let stagetennis = document.getElementById('stagetennis');
+// let stagetennistexte = document.getElementById('stagetennistexte');
 
-let stagecpam = document.getElementById('stagecpam');
-let stagecpamtexte = document.getElementById('stagecpamtexte');
+// let stagecpam = document.getElementById('stagecpam');
+// let stagecpamtexte = document.getElementById('stagecpamtexte');
 
 //diplome//
 // brevetBtn.addEventListener('mouseover', function () {
@@ -88,70 +88,70 @@ let stagecpamtexte = document.getElementById('stagecpamtexte');
 stageeffseit.addEventListener('click', function () {
   stageeffseittexte.style.color = '#ffffff';
   stageiyootexte.style.color = 'transparent';
-  stagetennistexte.style.color = 'transparent';
-  stagecpamtexte.style.color = 'transparent';
+  // stagetennistexte.style.color = 'transparent';
+  // stagecpamtexte.style.color = 'transparent';
 
   stageeffseit.style.backgroundColor = '#dedede';
   stageiyoo.style.backgroundColor = 'transparent';
-  stagetennis.style.backgroundColor = 'transparent';
-  stagecpam.style.backgroundColor = 'transparent';
+  // stagetennis.style.backgroundColor = 'transparent';
+  // stagecpam.style.backgroundColor = 'transparent';
 
   stageeffseit.style.color = '#313338';
   stageiyoo.style.color = '#dedede';
-  stagetennis.style.color = '#dedede';
-  stagecpam.style.color = '#dedede';
+  // stagetennis.style.color = '#dedede';
+  // stagecpam.style.color = '#dedede';
 });
 
 
 stageiyoo.addEventListener('click', function () {
   stageeffseittexte.style.color = 'transparent';
   stageiyootexte.style.color = '#ffffff';
-  stagetennistexte.style.color = 'transparent';
-  stagecpamtexte.style.color = 'transparent';
+  // stagetennistexte.style.color = 'transparent';
+  // stagecpamtexte.style.color = 'transparent';
 
   stageeffseit.style.backgroundColor = 'transparent';
   stageiyoo.style.backgroundColor = '#dedede';
-  stagetennis.style.backgroundColor = 'transparent';
-  stagecpam.style.backgroundColor = 'transparent';
+  // stagetennis.style.backgroundColor = 'transparent';
+  // stagecpam.style.backgroundColor = 'transparent';
 
   stageeffseit.style.color = '#dedede';
   stageiyoo.style.color = '#313338';
-  stagetennis.style.color = '#dedede';
-  stagecpam.style.color = '#dedede';
+  // stagetennis.style.color = '#dedede';
+  // stagecpam.style.color = '#dedede';
 });
 
 
-stagetennis.addEventListener('click', function () {
-  stageeffseittexte.style.color = 'transparent';
-  stageiyootexte.style.color = 'transparent';
-  stagetennistexte.style.color = '#ffffff';
-  stagecpamtexte.style.color = 'transparent';
+// stagetennis.addEventListener('click', function () {
+//   stageeffseittexte.style.color = 'transparent';
+//   stageiyootexte.style.color = 'transparent';
+//   // stagetennistexte.style.color = '#ffffff';
+//   // stagecpamtexte.style.color = 'transparent';
 
-  stageeffseit.style.backgroundColor = 'transparent';
-  stageiyoo.style.backgroundColor = 'transparent';
-  stagetennis.style.backgroundColor = '#dedede';
-  stagecpam.style.backgroundColor = 'transparent';
+//   stageeffseit.style.backgroundColor = 'transparent';
+//   stageiyoo.style.backgroundColor = 'transparent';
+//   // stagetennis.style.backgroundColor = '#dedede';
+//   // stagecpam.style.backgroundColor = 'transparent';
 
-  stageeffseit.style.color = '#dedede';
-  stageiyoo.style.color = '#dedede';
-  stagetennis.style.color = '#313338';
-  stagecpam.style.color = '#dedede';
-});
+//   stageeffseit.style.color = '#dedede';
+//   stageiyoo.style.color = '#dedede';
+//   // stagetennis.style.color = '#313338';
+//   // stagecpam.style.color = '#dedede';
+// });
 
 
-stagecpam.addEventListener('click', function () {
-  stageeffseittexte.style.color = 'transparent';
-  stageiyootexte.style.color = 'transparent';
-  stagetennistexte.style.color = 'transparent';
-  stagecpamtexte.style.color = '#ffffff';
+// stagecpam.addEventListener('click', function () {
+//   stageeffseittexte.style.color = 'transparent';
+//   stageiyootexte.style.color = 'transparent';
+//   stagetennistexte.style.color = 'transparent';
+//   stagecpamtexte.style.color = '#ffffff';
 
-  stageeffseit.style.backgroundColor = 'transparent';
-  stageiyoo.style.backgroundColor = 'transparent';
-  stagetennis.style.backgroundColor = 'transparent';
-  stagecpam.style.backgroundColor = '#dedede';
+//   stageeffseit.style.backgroundColor = 'transparent';
+//   stageiyoo.style.backgroundColor = 'transparent';
+//   stagetennis.style.backgroundColor = 'transparent';
+//   stagecpam.style.backgroundColor = '#dedede';
 
-  stageeffseit.style.color = '#dedede';
-  stageiyoo.style.color = '#dedede';
-  stagetennis.style.color = '#dedede';
-  stagecpam.style.color = '#313338';
-});
+//   stageeffseit.style.color = '#dedede';
+//   stageiyoo.style.color = '#dedede';
+//   stagetennis.style.color = '#dedede';
+//   stagecpam.style.color = '#313338';
+// });

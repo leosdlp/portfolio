@@ -11,7 +11,8 @@
   <title>Portfolio Léo SOLANA-DUPLAA</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" type="text/css" href="menu.css">
-  <link rel="stylesheet" type="text/css" href="footer.css">
+  <link rel="stylesheet" type="text/css" href="menu.css">
+  <link rel="stylesheet" type="text/css" href="projet.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -20,7 +21,131 @@
 </head>
 
 <body class="descriptif">
-  <h1>Bravo!!!</h1>
+  <nav>
+    <div class="menu-icon">&#9776; Menu</div>
+    <ul class="menu-list">
+      <li><a href="index.html#leosldp">Léo SOLANA-DUPLAA</a></li>
+      <li><a href="index.html#proposmoi">Parcours</a></li>
+      <li><a href="index.html#diplome">Diplômes</a></li>
+      <li><a href="index.html#competences">Compétences Informatiques</a></li>
+      <li><a href="index.html#experiences-pro">Expériences Pro</a></li>
+      <li><a href="index.html#bts-sio">BTS SIO</a></li>
+      <li><a href="index.html#e4">E4</a></li>
+      <li><a href="index.html#e5">E5</a></li>
+      <li><a href="index.html#veille-tech">Veille Tech</a></li>
+      <li><a href="index.html#infopers">Infos Personnelles</a></li>
+    </ul>
+  </nav>
+  <div class="container">
+    <h1 align="center">Fiche Explicative du projet Snake</h1>
+    <h2>Objectif : Jeu Snake en Python</h2>
+    <h3>Description</h3>
+    <p>Dans le cadre de mon BTS SIO option SLAM, j'ai développé un jeu Snake en utilisant le langage de programmation Python. Le jeu repose sur une interface graphique simple mais efficace, conçue avec la bibliothèque Tkinter. L'objectif du jeu est de contrôler un serpent qui se déplace sur l'écran, en évitant les obstacles et en mangeant des pommes pour grandir. Le score augmente à chaque pomme consommée, et la partie se termine si le serpent entre en collision avec les bords de l'écran ou avec lui-même.</p>
+    
+    <h3>Fonctionnalités principales</h3>
+    <ul>
+        <li>Interface utilisateur interactive et intuitive.</li>
+        <li>Déplacement fluide du serpent à l'aide des touches fléchées du clavier.</li>
+        <li>Gestion des collisions et conditions de fin de jeu.</li>
+        <li>Système de score affiché en temps réel.</li>
+        <li>Augmentation progressive de la difficulté avec la croissance du serpent.</li>
+    </ul>
+    
+    <h3>Technologies utilisées</h3>
+    <ul>
+        <li>Langage de programmation : Python</li>
+        <li>Bibliothèque graphique : Tkinter</li>
+    </ul>
+    
+    <h3>Objectifs pédagogiques</h3>
+    <p>Ce projet m'a permis de renforcer mes compétences en programmation Python, en particulier dans les domaines suivants :</p>
+    <ul>
+        <li>Utilisation de bibliothèques externes.</li>
+        <li>Gestion des événements et des interactions utilisateur.</li>
+        <li>Conception de jeux vidéo simples.</li>
+        <li>Gestion de la logique de jeu et des algorithmes de collision.</li>
+    </ul>
+    
+    <h3>Perspectives d'amélioration</h3>
+    <ul>
+        <li>Ajout de niveaux avec des obstacles variés.</li>
+        <li>Intégration de sons et de musiques pour améliorer l'expérience de jeu.</li>
+        <li>Sauvegarde et chargement des scores.</li>
+        <li>Portage du jeu sur d'autres plateformes.</li>
+    </ul>
+    <h3>Déploiement</h3>
+      <p>J’ai déployé snake.py en snake.exe afin qu’il puisse être exécutable très facilement. Il peut donc être téléchargeable très facilement. Pour cela, j’ai installé le module >auto-py-to-exe :</p>
+      <b>pip install auto-py-to-exe</b>
+      <p>Puis lancer la commande :</p>
+      <b>auto-py-to-exe</b>
+      <p>Et enfin j’ai remplis ce formulaire  :</p>
+      <img class="imagesnake" src="images/snakeExe.png" alt="image formulaire snake" align="center">
+    
+    <h3>Extrait de code :</h3>
+      <pre><code class="python">
+      <span class="variable">GAME_WIDTH</span> = <span class="number">800</span>
+      <span class="variable">GAME_HEIGHT</span> = <span class="number">800</span>
+      <span class="variable">SPEED</span> = <span class="number">100</span>
+      <span class="variable">SPACE_SIZE</span> = <span class="number">50</span>
+      <span class="variable">BODY_PARTS</span> = <span class="number">3</span>
+      <span class="variable">SNAKE_COLOR</span> = <span class="string">"#00FF00"</span>
+      <span class="variable">FOOD_COLOR</span> = <span class="string">"#FF0000"</span>
+      <span class="variable">GRID_SIZE</span> = <span class="number">50</span>
+      <span class="variable">diff_verif</span> = <span class="number">1</span>
+      <span class="variable">colorTemp1</span> = <span class="string">"#F5B041"</span>
+      <span class="variable">colorTemp2</span> = <span class="string">"#F39C12"</span>
+      
+      <span class="variable">window</span> = <span class="function">Tk</span>()
+      <span class="variable">window</span>.title(<span class="string">"Snake"</span>)
+      <span class="variable">window</span>.resizable(<span class="number">False</span>, <span class="number">False</span>)
+      
+      <span class="comment"># Créer le canvas</span>
+      <span class="variable">canvas</span> = <span class="function">Canvas</span>(<span class="variable">window</span>, bg=<span class="variable">colorTemp1</span>, height=<span class="variable">GAME_HEIGHT</span>, width=<span class="variable">GAME_WIDTH</span>)
+      
+      <span class="comment"># Ajouter la grille</span>
+      <span class="keyword">for</span> <span class="variable">i</span> <span class="keyword">in</span> <span class="function">range</span>(<span class="number">0</span>, <span class="variable">GAME_WIDTH</span>, <span class="variable">GRID_SIZE</span>):
+          <span class="keyword">for</span> <span class="variable">j</span> <span class="keyword">in</span> <span class="function">range</span>(<span class="number">0</span>, <span class="variable">GAME_HEIGHT</span>, <span class="variable">GRID_SIZE</span>):
+              <span class="keyword">if</span> (<span class="variable">i</span>//<span class="variable">GRID_SIZE</span> + <span class="variable">j</span>//<span class="variable">GRID_SIZE</span>) <span class="keyword">%</span> <span class="number">2</span> == <span class="number">0</span>:
+                  <span class="variable">color</span> = <span class="variable">colorTemp1</span>
+              <span class="keyword">else</span>:
+                  <span class="variable">color</span> = <span class="variable">colorTemp2</span>
+              <span class="variable">canvas</span>.create_rectangle(<span class="variable">i</span>, <span class="variable">j</span>, <span class="variable">i</span>+<span class="variable">GRID_SIZE</span>, <span class="variable">j</span>+<span class="variable">GRID_SIZE</span>, fill=<span class="variable">color</span>, outline=<span class="string">""</span>)
+              <p>[...]</p>
+      <span class="keyword">def</span> <span class="function">change_direction</span>(<span class="variable">new_direction</span>):
+        <span class="keyword">global</span> <span class="variable">direction</span>
+        <span class="keyword">if</span> <span class="variable">new_direction</span> == <span class="string">'left'</span>:
+            <span class="keyword">if</span> <span class="variable">direction</span> != <span class="string">'right'</span>:
+                <span class="variable">direction</span> = <span class="variable">new_direction</span>
+        <span class="keyword">elif</span> <span class="variable">new_direction</span> == <span class="string">'right'</span>:
+            <span class="keyword">if</span> <span class="variable">direction</span> != <span class="string">'left'</span>:
+                <span class="variable">direction</span> = <span class="variable">new_direction</span>
+        <span class="keyword">elif</span> <span class="variable">new_direction</span> == <span class="string">'up'</span>:
+            <span class="keyword">if</span> <span class="variable">direction</span> != <span class="string">'down'</span>:
+                <span class="variable">direction</span> = <span class="variable">new_direction</span>
+        <span class="keyword">elif</span> <span class="variable">new_direction</span> == <span class="string">'down'</span>:
+            <span class="keyword">if</span> <span class="variable">direction</span> != <span class="string">'up'</span>:
+                <span class="variable">direction</span> = <span class="variable">new_direction</span>
+
+      <span class="keyword">def</span> <span class="function">check_collisions</span>(<span class="variable">snake</span>):
+          <span class="variable">x</span>, <span class="variable">y</span> = <span class="variable">snake</span>.coordinates[<span class="number">0</span>]
+          <span class="keyword">if</span> <span class="variable">x</span> &lt; <span class="number">0</span> <span class="keyword">or</span> <span class="variable">x</span> &gt;= <span class="variable">GAME_WIDTH</span>:
+              <span class="built_in">print</span>(<span class="string">"GAME OVER"</span>)
+              <span class="keyword">return</span> <span class="keyword">True</span>
+          <span class="keyword">if</span> <span class="variable">y</span><span class="number">0</span> <span class="keyword">or</span> <span class="variable">y</span> >= <span class="variable">GAME_HEIGHT</span>:
+              <span class="built_in">print</span>(<span class="string">"GAME OVER"</span>)
+              <span class="keyword">return</span> <span class="keyword">True</span>
+          <span class="keyword">for</span> <span class="variable">body_part</span> <span class="keyword">in</span> <span class="variable">snake</span>.coordinates[<span class="number">1</span>:]:
+              <span class="keyword">if</span> <span class="variable">x</span> == <span class="variable">body_part</span>[<span class="number">0</span>] <span class="keyword">and</span> <span class="variable">y</span> == <span class="variable">body_part</span>[<span class="number">1</span>]:
+                  <span class="built_in">print</span>(<span class="string">"GAME OVER"</span>)
+                  <span class="keyword">return</span> <span class="keyword">True</span>
+          <span class="keyword">return</span> <span class="keyword">False</span>
+            </code></pre>
+      <div class="delBtn">
+        <a class="delBtnItem" href="docs/Fiche_Explicative_du_projet_Snake.pdf" download="Fiche_Explicative_du_projet_Snake">Fiche explicative</a>
+        <a class="delBtnItem" href="docs/snake.py" download="snake.py">Fichier python</a>
+        <a class="delBtnItem" href="docs/SnakeExe/snake.exe" download="snake.exe">Fichier .exe</a>
+      </div>
+    </div>
 </body>
 
 </html>
