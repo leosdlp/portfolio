@@ -47,9 +47,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
 let stageeffseit = document.getElementById('stageeffseit');
 let stageeffseittexte = document.getElementById('stageeffseittexte');
+let stageeffseitBtn = document.getElementById('stageeffseitBtn');
 
 let stageiyoo = document.getElementById('stageiyoo');
 let stageiyootexte = document.getElementById('stageiyootexte');
+let stageiyooBtn = document.getElementById('stageiyooBtn');
 
 // let stagetennis = document.getElementById('stagetennis');
 // let stagetennistexte = document.getElementById('stagetennistexte');
@@ -86,8 +88,10 @@ let stageiyootexte = document.getElementById('stageiyootexte');
 
 //stages//
 stageeffseit.addEventListener('click', function () {
-  stageeffseittexte.style.color = '#ffffff';
-  stageiyootexte.style.color = 'transparent';
+  stageeffseittexte.style.display = 'block';
+  stageeffseitBtn.style.display = 'block';
+  stageiyootexte.style.display = 'none';
+  stageiyooBtn.style.display = 'none';
   // stagetennistexte.style.color = 'transparent';
   // stagecpamtexte.style.color = 'transparent';
 
@@ -104,8 +108,11 @@ stageeffseit.addEventListener('click', function () {
 
 
 stageiyoo.addEventListener('click', function () {
-  stageeffseittexte.style.color = 'transparent';
-  stageiyootexte.style.color = '#ffffff';
+  stageeffseittexte.style.display = 'none';
+  stageeffseitBtn.style.display = 'none';
+  stageiyootexte.style.display = 'block';
+  stageiyooBtn.style.display = 'block';
+  
   // stagetennistexte.style.color = 'transparent';
   // stagecpamtexte.style.color = 'transparent';
 
