@@ -121,7 +121,7 @@ body {
   color: #dedede;
 }
 
-.cvtel,.tabtel, .delBtnItem {
+.cvtel, .delBtnItem {
   color: #b8b8ff;
   border: 1px solid #b8b8ff;
   background-color: transparent;
@@ -143,6 +143,21 @@ body {
   cursor: pointer;
   transform: translateY(-0.2rem);
   box-shadow: inset 15rem 0 0 0 #b8b8ff;
+}
+
+.tabtel{
+  width:80%;
+  color: #b8b8ff;
+  border: 1px solid #b8b8ff;
+  background-color: transparent;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  box-shadow: inset 0 0 0 0 #b8b8ff;
+  -webkit-transition: ease-out 0.4s;
+  -moz-transition: ease-out 0.4s;
+  transition: ease-out 0.3s;
+  padding:0.8rem;
+  text-decoration: none;
 }
 
 .tabtel:hover, .delBtnItem:hover {
@@ -319,14 +334,20 @@ body {
   .stage-en-cours{
     height: 20rem;
   }
-  .btssio{
-    display: block !important;
+  .btssio, .e5Items{
+    grid-template-columns: repeat(1, 1fr) !important;
     width:80% !important;
     gap:1rem !important;
   }
   .slam , .sisr{
     margin-left: auto;
     margin-right: auto;
+  }
+  .cont-veilleBtn{
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+  .delBtn{
+    grid-template-columns: repeat(2, 1fr) !important;
   }
 }
 
@@ -347,14 +368,20 @@ body {
   .stage-en-cours{
     height: 25rem;
   }
-  .btssio{
-    display: block !important;
+  .btssio, .e5Items{
+    grid-template-columns: repeat(1, 1fr) !important;
     width:80% !important;
     gap:1rem !important;
   }
   .slam , .sisr{
     margin-left: auto;
     margin-right: auto;
+  }
+  .cont-veilleBtn{
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+  .delBtn{
+    grid-template-columns: repeat(1, 1fr) !important;
   }
 }
 
@@ -457,15 +484,18 @@ body {
   transition: 0.4s;
 }
 
-.btssio{
-  display: flex;
+.btssio, .e5Items{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap:2rem;
   justify-content: center;
   margin-top: 2rem;
   text-align: center;
+  margin-left: auto;
+  margin-right:auto;
 }
 
-.sisr, .slam{
+.sisr, .slam, .situation{
   border:1px solid white;
   border-radius:1rem;
   padding:1rem;
@@ -474,13 +504,25 @@ body {
   place-items: center;
   text-align: center;
   transition: .5s;
+  margin-bottom:2rem;
 }
 
-.sisr:hover, .slam:hover{
+.sisr:hover, .slam:hover, .situation:hover{
   background-color: #030346;
 }
 
 .cont-e4 {
+  display: block;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10vh;
+  width: 80%;
+  margin-bottom: 6vh;
+  text-align: center;
+}
+
+.cont-e5 {
   display: block;
   align-items: center;
   margin-left: auto;
@@ -508,7 +550,8 @@ body {
 }
 
 .cont-veilleBtn{
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   width:50%;
   margin-left:auto;
   margin-right:auto;
@@ -545,4 +588,11 @@ body {
 
 .buttons{
   margin-bottom:3rem;
+}
+
+.delBtn{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width:70%;
+  gap: 1rem;
 }
